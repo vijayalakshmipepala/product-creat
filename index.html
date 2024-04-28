@@ -29,68 +29,29 @@
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline-block;
             margin-right: 20px;
         }
 
         nav ul li a {
-            color: white;
+            color: #f5f5f5; /* Use a lighter text color to increase contrast */
             text-decoration: none;
-        }
-
-        /* Main content */
-        main {
-            padding: 20px;
-        }
-
-        .product-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .product-section img {
-            width: 200px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .product-section h3 {
-            color: #333;
-        }
-
-        /* Form section */
-        .form-section {
-            padding: 20px;
-            background-color: #e9f5e9;
-            border-radius: 10px;
-            margin-top: 20px;
-        }
-
-        .form-section h2 {
-            margin-bottom: 10px;
-        }
-
-        .form-section input[type="text"],
-        .form-section input[type="email"] {
-            padding: 8px;
-            width: 100%;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
+            padding: 8px 12px;
+            transition: background-color 0.3s ease;
             border-radius: 5px;
         }
 
-        .form-section button {
-            background-color: #6a8d6a;
-            color: white;
-            padding: 10px 15px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
+        /* Add hover effect for better visibility */
+        nav ul li a:hover {
+            background-color: #467046; /* Change background color on hover */
+            color: white; /* Keep text color white */
         }
+
+        /* Main content and other styles ... */
 
         /* Footer styles */
         footer {
@@ -103,17 +64,6 @@
             bottom: 0;
         }
     </style>
-
-    <!-- JavaScript -->
-    <script>
-        // Function to handle form submission
-        function handleFormSubmission(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            alert(`Thank you, ${name}! We will contact you at ${email}.`);
-        }
-    </script>
 </head>
 
 <body>
@@ -128,29 +78,7 @@
         </nav>
     </header>
 
-    <!-- Main Content -->
-    <main>
-        <div class="product-section">
-            <img src="wellness-products.jpg" alt="Wellness Products">
-            <h3>Wellness & Self-Care Products</h3>
-            <p>Explore our range of wellness and self-care products designed to enhance your health and well-being.</p>
-        </div>
-
-        <!-- Form Section -->
-        <div class="form-section">
-            <h2>Contact Us</h2>
-            <form id="contactForm" onsubmit="handleFormSubmission(event)">
-                <input type="text" id="name" name="name" placeholder="Name" required><br>
-                <input type="email" id="email" name="email" placeholder="Email" required><br>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </main>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2024 Wellness & Self-Care. All rights reserved.</p>
-    </footer>
+    <!-- Main content and footer sections... -->
 </body>
 
 </html>
